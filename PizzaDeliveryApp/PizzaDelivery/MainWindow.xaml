@@ -110,8 +110,8 @@
                 <DataGridTextColumn Header="Size" Binding="{Binding Size}" Width="100"/>
                 <DataGridTextColumn Header="Dough" Binding="{Binding Dough}" Width="120"/>
                 <DataGridTextColumn Header="Sauces" Binding="{Binding SauceCount}" Width="80"/>
-                <DataGridTextColumn Header="Price ($)" Binding="{Binding Price}" Width="90"/>
-                <DataGridTextColumn Header="Prep Time (min)" Binding="{Binding PrepTime}" Width="120"/>
+                <DataGridTextColumn Header="Price ($)" Binding="{Binding TotalPrice}" Width="90"/>
+                <DataGridTextColumn Header="Prep Time (min)" Binding="{Binding PrepTimeMinutes}" Width="120"/>
             </DataGrid.Columns>
         </DataGrid>
 
