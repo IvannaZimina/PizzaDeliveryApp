@@ -2,6 +2,7 @@
 {
     public struct PizzaOrder
     {
+        // { get; set; } added as properties for DataGrid in WPF
         public int Id { get; set; }             // Unique number to identify the order
         public string ClientName { get; set; }  // Full name of the customer who ordered the pizza
         public PizzaSize Size { get; set; }     // Size of the pizza (Small, Medium, or Large)
