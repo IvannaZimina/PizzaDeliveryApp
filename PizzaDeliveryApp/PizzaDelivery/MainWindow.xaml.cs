@@ -43,12 +43,11 @@ namespace PizzaDelivery
             // [displayedOrders] - The actual filtered list of pizza orders (the collection of items)
             OrdersDataGrid.ItemsSource = displayedOrders;
 
-            // Update bottom statistics labels
-            TxtTotalOrders.Text = allOrders.Count.ToString();
+            // Update bottom statistics labels based on the currently displayed (filtered) orders
+            TxtTotalOrders.Text = displayedOrders.Count.ToString();
 
-            // Fixed property name: TotalPrice instead of Price
-            // Sum() from LINQ is used to calculate the total revenue by summing the TotalPrice property of all orders.
-            decimal totalRevenue = allOrders.Sum(o => o.TotalPrice);
+            // Sum() from LINQ is used to calculate the total revenue by summing the TotalPrice property of displayed orders.
+            decimal totalRevenue = displayedOrders.Sum(o => o.TotalPrice);
 
             // :F2 means that the number will be rounded to exactly two decimal places.
             TxtTotalRevenue.Text = $"{totalRevenue:F2} $";
@@ -70,10 +69,16 @@ namespace PizzaDelivery
             // Creates an instance of the Order Creation dialog box.
             var dialog = new OrderDialog();
 
+            // 1. Specify that the current window is the owner of this dialog box
+            dialog.Owner = this;
+
+            // 2. Instruct the system to open the window strictly in the center of the owner window
+            dialog.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+
             if (dialog.ShowDialog() == true)
             {
-                // passing the current search text there so that the table is updated, but the filter is not reset.
-                RefreshDataGrid(TxtSearch.Text); 
+                // Passing the current search text there so that the table is updated, but the filter is not reset.
+                RefreshDataGrid(TxtSearch.Text);
             }
         }
 
@@ -107,7 +112,7 @@ namespace PizzaDelivery
                     }
                     catch (DomainException ex)
                     {
-                        // Handle business logic exceptions, whih was set in the Core
+                        // Handle business logic exceptions, which was set in the Core
                         MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                     }
                 }
