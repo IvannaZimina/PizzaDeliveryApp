@@ -209,3 +209,19 @@ When the user clicks the "Save" button in the WPF dialog box, the addition metho
   * *Where it is used:* Order status indicators, success messages.
 
 ---
+
+## View
+<img width="1157" height="692" alt="image" src="https://github.com/user-attachments/assets/58c9f0c3-dc0b-4df4-9aff-688dd458df7a" />
+<img width="1157" height="688" alt="image" src="https://github.com/user-attachments/assets/95bcd8aa-308e-4a50-bc29-91510cfc5fe1" />
+<img width="1157" height="696" alt="image" src="https://github.com/user-attachments/assets/37378a52-5765-4356-b2d9-44eef905bf6d" />
+<img width="1157" height="690" alt="image" src="https://github.com/user-attachments/assets/42fec35d-50de-4dfe-8f85-d53682642714" />
+<img width="1157" height="691" alt="image" src="https://github.com/user-attachments/assets/7d5f3f9a-d589-4d70-b7cf-45359e8ce23c" />
+<img width="1157" height="684" alt="image" src="https://github.com/user-attachments/assets/842f3016-2726-4580-9e73-45a8a644bade" />
+<img width="1157" height="695" alt="image" src="https://github.com/user-attachments/assets/086cce87-6771-456b-b427-ae2f894c7dd7" />
+
+
+
+
+
+
+
